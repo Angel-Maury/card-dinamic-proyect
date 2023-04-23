@@ -1,0 +1,220 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eee;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.contenedor-tarjetas {
+    background: url(../images/bg-main-mobile.png);
+    height: 35vh;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    color: #fff;
+    justify-content: start;
+    z-index: 1;
+
+    .grupo-tarjeta-delantera {
+        background: url(../images/bg-card-front.png);
+        z-index: 3;
+        width: 18.24rem;
+        height: 10rem;
+        position: absolute;
+        top: 127px;
+        left: 20px;
+        background-size: cover;
+        display: flex;
+
+        .tarjeta-delantera {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            grid-template-rows: repeat(3, auto);
+            grid-template-areas:
+                "logo"
+                "numeros"
+                "expedicion";
+            padding: 10px;
+            height: 100%;
+            width: 100%;
+
+            .container-logo-card {
+                display: flex;
+                align-items: center;
+
+                .logo-card {
+                    height: 30px;
+                    grid-area: logo;
+                    position: relative;
+                }
+            }
+
+            .numeros {
+                grid-area: numeros;
+                display: flex;
+                align-items: end;
+                justify-content: center;
+                font-size: 21px;
+                letter-spacing: 1px;
+                position: relative;
+                padding-right: 8px;
+            }
+
+            .expedicion {
+                grid-area: expedicion;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                align-items: start;
+                font-size: 12px;
+                padding-left: 8px;
+                padding-right: 8px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    .tarjeta-trasera {
+        background: url(../images/bg-card-back.png);
+        background-repeat: no-repeat;
+        position: absolute;
+        background-size: cover;
+        width: 18.24rem;
+        height: 10rem;
+        z-index: 2;
+        margin: 36px 20px 20px 70px;
+
+        #ccv {
+            position: absolute;
+            margin: 22px;
+            top: 47.5px;
+            right: 20px;
+            font-size: 16px;
+        }
+    }
+}
+
+.formulario {
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    .grupo {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        letter-spacing: 2px;
+
+        label {
+            padding-bottom: 5px;
+        }
+
+        .nombre,
+        .numero {
+            border: solid 1px #ccc;
+            height: 35px;
+            border-radius: 5px;
+            text-transform: uppercase;
+
+            &:hover {
+                border: solid 2px rgb(200, 60, 202);
+            }
+
+            &:focus {
+                outline: rgb(4, 4, 4);
+                box-shadow: 1px 7px 10px -5px rgba(90, 116, 148, 0.3);
+            }
+
+
+            &::placeholder {
+                color: #ccc;
+                font-family: "space Grotesk";
+                padding-left: 10px;
+            }
+
+        }
+    }
+
+    .expedicion {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, auto);
+        grid-template-areas:
+            "flexbox ccv"
+            "flexbox ccv";
+        gap: 10px;
+        padding-top: 30px;
+
+        .flexbox {
+            display: flex;
+            flex-direction: column;
+            grid-area: flexbox;
+
+            .grupo-select {
+                padding-top: 10px;
+                padding-right: 5px;
+
+                select {
+                    width: 40%;
+                    height: 40px;
+                    border: 2px solid #ccc;
+                    font-size: 14px;
+                    padding: 5px;
+                    font-family: "space Grotesk";
+                    transition: .3s ease all;
+                    border-radius: 5px;
+                    -webkit-appearance: none;
+                    cursor: pointer;
+                    text-align: center;
+
+                    &:hover {
+                        border: solid 2px rgb(200, 60, 202);
+                    }
+                }
+
+            }
+        }
+
+        .ccv {
+            grid-area: ccv;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+
+            label {
+                padding-bottom: 10px;
+            }
+
+            input {
+                transition: .3s ease all;
+                border-radius: 5px;
+                border: 2px solid #ccc;
+                font-family: "space Grotesk";
+                height: 40px;
+
+                &::placeholder {
+                    padding-left: 10px;
+                    color: #ccc;
+                    font-size: 16px;
+                }
+
+                &:hover {
+                    border: solid 2px rgb(200, 60, 202);
+                }
+
+                &:focus {
+                    outline: rgb(4, 4, 4);
+                    box-shadow: 1px 7px 10px -5px rgba(90, 116, 148, 0.3);
+                }
+            }
+        }
+    }
+}

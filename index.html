@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/estilos.css">
+  <title>Interactive card details form</title>
+</head>
+
+<body>
+
+  <div class="contenedor-tarjetas">
+    <div class="grupo-tarjeta-delantera">
+      <div class="tarjeta-delantera">
+        <div class="container-logo-card">
+          <img src="./images/card-logo.svg" alt="" class="logo-card">
+        </div>
+        <label for="" class="numeros" id="numerosTarjeta">0000 0000 0000 0000</label>
+        <div class="expedicion">
+          <label for="" class="nombre" id="nombreTarjeta">EL COTOPLITAS</label>
+          <label for="" class="expedicion" id="Expedicion"><span id="numeroExpedicion">00</span> / <span
+              id="numeroExpedicionAño">00</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="tarjeta-trasera">
+      <label for="" id="ccv">000</label>
+    </div>
+  </div>
+
+  <form action="" class="formulario" id="formulario">
+
+    <div class="grupo">
+      <label for="nombre">CARDHOLDER NAME</label>
+      <input type="text" id="nombre" class="nombre" placeholder="e.g. Juancho" maxlength="19" autocomplete="off">
+    </div>
+    <div class="grupo">
+      <label for="numero">CARD NUMBER</label>
+      <input type="text" id="numero" class="numero" placeholder="e.g. 1234 5678 9999 9999" maxlength="19"
+        autocomplete="off">
+    </div>
+
+    <div class="expedicion">
+      <div class="flexbox">
+        <label for="selectMes">EXP. DATE(MM/YY)</label>
+        <div class="grupo-select">
+          <select name="mes" id="selectMes">
+            <option disabled selected>MES</option>
+          </select>
+          <select name="año" id="selectAño">
+            <option disabled selected>AÑO</option>
+          </select>
+        </div>
+      </div>
+      <div class="ccv">
+        <label for="ccv">CVC</label>
+        <input name="ccv" id="ccvForm" maxlength="3" placeholder="e.g. 123">
+        </input>
+      </div>
+    </div>
+  </form>
+
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
