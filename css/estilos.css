@@ -82,7 +82,8 @@ body {
 .formulario {
   padding-top: 60px;
   padding-left: 30px;
-  padding-right: 30px; }
+  padding-right: 30px;
+  display: none; }
   .formulario .grupo {
     display: flex;
     flex-direction: column;
@@ -90,6 +91,12 @@ body {
     letter-spacing: 2px; }
     .formulario .grupo label {
       padding-bottom: 5px; }
+    .formulario .grupo .text-error,
+    .formulario .grupo .text-error-number {
+      color: red;
+      font-size: 10px;
+      padding-top: 2px;
+      transition: all .5s ease; }
     .formulario .grupo .nombre,
     .formulario .grupo .numero {
       border: solid 1px #ccc;
@@ -98,7 +105,7 @@ body {
       text-transform: uppercase; }
       .formulario .grupo .nombre:hover,
       .formulario .grupo .numero:hover {
-        border: solid 2px #c83cca; }
+        border: solid 2px #21092f; }
       .formulario .grupo .nombre:focus,
       .formulario .grupo .numero:focus {
         outline: #040404;
@@ -118,7 +125,8 @@ body {
     .formulario .expedicion .flexbox {
       display: flex;
       flex-direction: column;
-      grid-area: flexbox; }
+      grid-area: flexbox;
+      letter-spacing: 2px; }
       .formulario .expedicion .flexbox .grupo-select {
         padding-top: 10px;
         padding-right: 5px; }
@@ -133,11 +141,18 @@ body {
           border-radius: 5px;
           -webkit-appearance: none;
           cursor: pointer;
-          text-align: center; }
+          text-align: center;
+          letter-spacing: 2px; }
           .formulario .expedicion .flexbox .grupo-select select:hover {
-            border: solid 2px #c83cca; }
+            border: solid 2px #21092f; }
+    .formulario .expedicion .text-error-cvc {
+      color: red;
+      font-size: 13px;
+      padding-top: 2px;
+      transition: all .5s ease; }
     .formulario .expedicion .ccv {
       grid-area: ccv;
+      letter-spacing: 2px;
       display: flex;
       flex-direction: column;
       justify-content: center; }
@@ -154,9 +169,93 @@ body {
           color: #ccc;
           font-size: 16px; }
         .formulario .expedicion .ccv input:hover {
-          border: solid 2px #c83cca; }
+          border: solid 2px #21092f; }
         .formulario .expedicion .ccv input:focus {
           outline: #040404;
           box-shadow: 1px 7px 10px -5px rgba(90, 116, 148, 0.3); }
+  .formulario .btn-enviar {
+    background: #21092f;
+    border: transparent;
+    border-radius: 5px;
+    width: 70%;
+    height: 50px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    margin-left: 13.5%;
+    cursor: pointer;
+    transition: all .5s ease; }
+    .formulario .btn-enviar:hover {
+      box-shadow: 1px 7px 10px -5px #21092f;
+      transition: all .5s ease; }
+  .formulario .text-error-complete {
+    color: red;
+    text-align: center;
+    padding-right: 12px;
+    padding-top: 10px; }
+
+.active-text {
+  display: none;
+  transition: all .5s ease; }
+
+.error {
+  border: solid 1px #ff000088;
+  height: 35px;
+  border-radius: 5px;
+  text-transform: uppercase; }
+  .error:hover {
+    border: solid 2px rgba(255, 0, 0, 0.528); }
+  .error:focus {
+    outline: #040404;
+    box-shadow: 1px 7px 10px -5px rgba(255, 0, 0, 0.557); }
+  .error::placeholder {
+    color: #ff00007f;
+    font-family: "space Grotesk";
+    padding-left: 10px; }
+
+.active {
+  display: block; }
+
+.complete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px;
+  display: none; }
+  .complete img {
+    height: 90px;
+    width: 90px;
+    margin-bottom: 30px; }
+  .complete h1 {
+    padding-bottom: 10px;
+    letter-spacing: 2px; }
+  .complete p {
+    letter-spacing: 1px;
+    padding-bottom: 30px; }
+  .complete .btn-continue {
+    background: #21092f;
+    border: transparent;
+    border-radius: 5px;
+    width: 70%;
+    height: 50px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: all .5s ease; }
+    .complete .btn-continue:hover {
+      box-shadow: 1px 7px 10px -5px #21092f;
+      transition: all .5s ease; }
+
+.active-complete {
+  display: flex; }
 
 /*# sourceMappingURL=estilos.css.map */

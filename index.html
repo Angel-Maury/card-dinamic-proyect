@@ -34,16 +34,18 @@
     </div>
   </div>
 
-  <form action="" class="formulario" id="formulario">
+  <form action="" class="formulario active" id="formulario">
 
     <div class="grupo">
       <label for="nombre">CARDHOLDER NAME</label>
       <input type="text" id="nombre" class="nombre" placeholder="e.g. Juancho" maxlength="19" autocomplete="off">
+      <p class="text-error active-text">Complete the area correctly</p>
     </div>
     <div class="grupo">
       <label for="numero">CARD NUMBER</label>
       <input type="text" id="numero" class="numero" placeholder="e.g. 1234 5678 9999 9999" maxlength="19"
         autocomplete="off">
+      <p class="text-error-number active-text">Complete the area correctly</p>
     </div>
 
     <div class="expedicion">
@@ -60,11 +62,20 @@
       </div>
       <div class="ccv">
         <label for="ccv">CVC</label>
-        <input name="ccv" id="ccvForm" maxlength="3" placeholder="e.g. 123">
+        <input name="ccv" id="ccvForm" maxlength="3" placeholder="E.G. 123">
         </input>
+        <p class="text-error-cvc active-text">Complete the area correctly</p>
       </div>
     </div>
+    <button type="submit" class="btn-enviar" id="btnEnviar">Confirm</button>
+    <p class="text-error-complete active-text">Complete the areas correctamente!!</p>
   </form>
+  <section class="complete" id="complete">
+    <img src="./images/icon-complete.svg" alt="">
+    <h1>THANK YOU!</h1>
+    <p>We've added your card details</p>
+    <button type="submit" class="btn-continue" id="btnContinue">Continue</button>
+  </section>
 
 
   <script src="./js/main.js"></script>

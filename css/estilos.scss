@@ -101,10 +101,12 @@ body {
     }
 }
 
+// FORMULARIO
 .formulario {
     padding-top: 60px;
     padding-left: 30px;
     padding-right: 30px;
+    display: none;
 
     .grupo {
         display: flex;
@@ -116,6 +118,14 @@ body {
             padding-bottom: 5px;
         }
 
+        .text-error,
+        .text-error-number {
+            color: red;
+            font-size: 10px;
+            padding-top: 2px;
+            transition: all .5s ease;
+        }
+
         .nombre,
         .numero {
             border: solid 1px #ccc;
@@ -124,7 +134,7 @@ body {
             text-transform: uppercase;
 
             &:hover {
-                border: solid 2px rgb(200, 60, 202);
+                border: solid 2px hsl(278, 68%, 11%);
             }
 
             &:focus {
@@ -132,13 +142,11 @@ body {
                 box-shadow: 1px 7px 10px -5px rgba(90, 116, 148, 0.3);
             }
 
-
             &::placeholder {
                 color: #ccc;
                 font-family: "space Grotesk";
                 padding-left: 10px;
             }
-
         }
     }
 
@@ -156,6 +164,7 @@ body {
             display: flex;
             flex-direction: column;
             grid-area: flexbox;
+            letter-spacing: 2px;
 
             .grupo-select {
                 padding-top: 10px;
@@ -173,17 +182,26 @@ body {
                     -webkit-appearance: none;
                     cursor: pointer;
                     text-align: center;
+                    letter-spacing: 2px;
 
                     &:hover {
-                        border: solid 2px rgb(200, 60, 202);
+                        border: solid 2px hsl(278, 68%, 11%);
                     }
                 }
 
             }
         }
 
+        .text-error-cvc {
+            color: red;
+            font-size: 13px;
+            padding-top: 2px;
+            transition: all .5s ease;
+        }
+
         .ccv {
             grid-area: ccv;
+            letter-spacing: 2px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -207,7 +225,7 @@ body {
                 }
 
                 &:hover {
-                    border: solid 2px rgb(200, 60, 202);
+                    border: solid 2px hsl(278, 68%, 11%);
                 }
 
                 &:focus {
@@ -217,4 +235,122 @@ body {
             }
         }
     }
+
+    .btn-enviar {
+        background: hsl(278, 68%, 11%);
+        border: transparent;
+        border-radius: 5px;
+        width: 70%;
+        height: 50px;
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+        color: #fff;
+        letter-spacing: 2px;
+        margin-top: 40px;
+        margin-left: 13.5%;
+        cursor: pointer;
+        transition: all .5s ease;
+
+        &:hover {
+            box-shadow: 1px 7px 10px -5px hsl(278, 68%, 11%);
+            transition: all .5s ease;
+        }
+
+    }
+
+    .text-error-complete {
+        color: red;
+        text-align: center;
+        padding-right: 12px;
+        padding-top: 10px;
+    }
+}
+
+// ESTILOS A ACTIVAR CON JS
+
+.active-text {
+    display: none;
+    transition: all .5s ease;
+}
+
+.error {
+    border: solid 1px #ff000088;
+    height: 35px;
+    border-radius: 5px;
+    text-transform: uppercase;
+
+    &:hover {
+        border: solid 2px hsla(0, 100%, 50%, 0.528)
+    }
+
+    &:focus {
+        outline: rgb(4, 4, 4);
+        box-shadow: 1px 7px 10px -5px rgba(255, 0, 0, 0.557);
+    }
+
+    &::placeholder {
+        color: #ff00007f;
+        font-family: "space Grotesk";
+        padding-left: 10px;
+    }
+}
+
+.active {
+    display: block;
+}
+
+//COMPLETE :D
+.complete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px;
+    display: none;
+
+    img {
+        height: 90px;
+        width: 90px;
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        padding-bottom: 10px;
+        letter-spacing: 2px;
+    }
+
+    p {
+        letter-spacing: 1px;
+        padding-bottom: 30px;
+    }
+
+    .btn-continue {
+        background: hsl(278, 68%, 11%);
+        border: transparent;
+        border-radius: 5px;
+        width: 70%;
+        height: 50px;
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+        color: #fff;
+        letter-spacing: 2px;
+        margin-top: 5px;
+        cursor: pointer;
+        transition: all .5s ease;
+
+        &:hover {
+            box-shadow: 1px 7px 10px -5px hsl(278, 68%, 11%);
+            transition: all .5s ease;
+        }
+
+    }
+}
+
+// ESTILO A ACTIVAR CON JS
+
+.active-complete {
+    display: flex;
 }
