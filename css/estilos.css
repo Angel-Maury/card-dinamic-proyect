@@ -282,24 +282,30 @@ body {
     align-items: center;
     z-index: 1;
     flex-direction: row; }
-    .contenedor-tarjetas .grupo-tarjeta-delantera {
-      margin: 20px;
+    .contenedor-tarjetas .tarjeta-delantera-contenedor {
+      margin-bottom: 110%;
+      position: absolute;
       width: 370px;
-      border-radius: 10px;
-      height: 210px;
-      margin-left: 180px;
-      position: absolute; }
-      .contenedor-tarjetas .grupo-tarjeta-delantera .tarjeta-delantera .numeros {
-        font-size: 25px; }
-      .contenedor-tarjetas .grupo-tarjeta-delantera .tarjeta-delantera .expedicion {
-        padding-left: 25px;
-        padding-right: 17px;
-        font-size: 14px; }
-      .contenedor-tarjetas .grupo-tarjeta-delantera .tarjeta-delantera .container-logo-card {
-        padding-top: 10px; }
-        .contenedor-tarjetas .grupo-tarjeta-delantera .tarjeta-delantera .container-logo-card .logo-card {
-          height: 40px;
-          padding-left: 18px; }
+      height: 210px; }
+      .contenedor-tarjetas .tarjeta-delantera-contenedor .grupo-tarjeta-delantera {
+        position: absolute;
+        width: 370px;
+        height: 210px;
+        border-radius: 10px;
+        margin-left: 20%; }
+        .contenedor-tarjetas .tarjeta-delantera-contenedor .grupo-tarjeta-delantera .tarjeta-delantera {
+          position: absolute; }
+          .contenedor-tarjetas .tarjeta-delantera-contenedor .grupo-tarjeta-delantera .tarjeta-delantera .numeros {
+            font-size: 25px; }
+          .contenedor-tarjetas .tarjeta-delantera-contenedor .grupo-tarjeta-delantera .tarjeta-delantera .expedicion {
+            padding-left: 25px;
+            padding-right: 17px;
+            font-size: 14px; }
+          .contenedor-tarjetas .tarjeta-delantera-contenedor .grupo-tarjeta-delantera .tarjeta-delantera .container-logo-card {
+            padding-top: 10px; }
+            .contenedor-tarjetas .tarjeta-delantera-contenedor .grupo-tarjeta-delantera .tarjeta-delantera .container-logo-card .logo-card {
+              height: 40px;
+              padding-left: 18px; }
     .contenedor-tarjetas .grupo-tarjeta-trasera {
       margin-top: 140px;
       position: absolute;
@@ -309,7 +315,7 @@ body {
         width: 370px;
         height: 210px;
         border-radius: 10px;
-        margin-left: 200px; }
+        margin-left: 60%; }
       .contenedor-tarjetas .grupo-tarjeta-trasera #ccv {
         margin-top: 45.1px; }
 
@@ -322,5 +328,13 @@ body {
   .complete {
     margin-left: 350px;
     margin-top: 150px; } }
+@media (min-width: 1400px) {
+  .contenedor-tarjetas .tarjeta-delantera-contenedor {
+    margin-bottom: 500px; }
+
+  .formulario {
+    width: 80vh;
+    margin-left: 40vh;
+    margin-top: 20vh; } }
 
 /*# sourceMappingURL=estilos.css.map */

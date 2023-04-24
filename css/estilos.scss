@@ -386,36 +386,46 @@ body {
         z-index: 1;
         flex-direction: row;
 
-        .grupo-tarjeta-delantera {
-            margin: 20px;
-            width: 370px;
-            border-radius: 10px;
-            height: 210px;
-            margin-left: 180px;
+        .tarjeta-delantera-contenedor {
+            margin-bottom: 110%;
             position: absolute;
+            width: 370px;
+            height: 210px;
 
-            .tarjeta-delantera {
-                .numeros {
-                    font-size: 25px;
-                }
+            .grupo-tarjeta-delantera {
+                position: absolute;
+                width: 370px;
+                height: 210px;
+                border-radius: 10px;
+                margin-left: 20%;
 
-                .expedicion {
-                    padding-left: 25px;
-                    padding-right: 17px;
-                    font-size: 14px;
-                }
+                .tarjeta-delantera {
+                    position: absolute;
 
-                .container-logo-card {
-                    padding-top: 10px;
 
-                    .logo-card {
-                        height: 40px;
-                        padding-left: 18px;
+                    .numeros {
+                        font-size: 25px;
+                    }
+
+                    .expedicion {
+                        padding-left: 25px;
+                        padding-right: 17px;
+                        font-size: 14px;
+                    }
+
+                    .container-logo-card {
+                        padding-top: 10px;
+
+                        .logo-card {
+                            height: 40px;
+                            padding-left: 18px;
+                        }
                     }
                 }
-            }
 
+            }
         }
+
 
         .grupo-tarjeta-trasera {
             margin-top: 140px;
@@ -428,7 +438,7 @@ body {
                 width: 370px;
                 height: 210px;
                 border-radius: 10px;
-                margin-left: 200px;
+                margin-left: 60%;
             }
 
             #ccv {
@@ -448,5 +458,19 @@ body {
     .complete {
         margin-left: 350px;
         margin-top: 150px;
+    }
+}
+
+@media(min-width: 1400px) {
+    .contenedor-tarjetas {
+        .tarjeta-delantera-contenedor {
+            margin-bottom: 500px;
+        }
+    }
+
+    .formulario {
+        width: 80vh;
+        margin-left: 40vh;
+        margin-top: 20vh;
     }
 }
