@@ -335,6 +335,10 @@ body {
   .formulario {
     width: 80vh;
     margin-left: 40vh;
-    margin-top: 20vh; } }
+    margin-top: 20vh; }
+
+  .complete {
+    margin-left: 450px;
+    margin-top: 230px; } }
 
 /*# sourceMappingURL=estilos.css.map */
