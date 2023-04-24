@@ -97,6 +97,7 @@ body {
             top: 47.5px;
             right: 20px;
             font-size: 16px;
+            letter-spacing: 2px;
         }
     }
 }
@@ -132,6 +133,7 @@ body {
             height: 35px;
             border-radius: 5px;
             text-transform: uppercase;
+            font-family: 'Space Grotesk';
 
             &:hover {
                 border: solid 2px hsl(278, 68%, 11%);
@@ -280,6 +282,7 @@ body {
     height: 35px;
     border-radius: 5px;
     text-transform: uppercase;
+    font-family: 'Space Grotesk';
 
     &:hover {
         border: solid 2px hsla(0, 100%, 50%, 0.528)
@@ -353,4 +356,97 @@ body {
 
 .active-complete {
     display: flex;
+}
+
+
+
+// ESTILOS DESKTOP
+
+@media(min-width: 1200px) {
+    body {
+        background: #ffffff;
+    }
+
+    .contenedor-principal {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contenedor-tarjetas {
+        background: url(../images/bg-main-desktop.png);
+        height: 100vh;
+        width: 60vh;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        color: #fff;
+        justify-content: end;
+        align-items: center;
+        z-index: 1;
+        flex-direction: row;
+
+        .grupo-tarjeta-delantera {
+            margin: 20px;
+            width: 370px;
+            border-radius: 10px;
+            height: 210px;
+            margin-left: 180px;
+            position: absolute;
+
+            .tarjeta-delantera {
+                .numeros {
+                    font-size: 25px;
+                }
+
+                .expedicion {
+                    padding-left: 25px;
+                    padding-right: 17px;
+                    font-size: 14px;
+                }
+
+                .container-logo-card {
+                    padding-top: 10px;
+
+                    .logo-card {
+                        height: 40px;
+                        padding-left: 18px;
+                    }
+                }
+            }
+
+        }
+
+        .grupo-tarjeta-trasera {
+            margin-top: 140px;
+            position: absolute;
+            width: 370px;
+            height: 210px;
+
+
+            .tarjeta-trasera {
+                width: 370px;
+                height: 210px;
+                border-radius: 10px;
+                margin-left: 200px;
+            }
+
+            #ccv {
+                margin-top: 45.1px;
+            }
+        }
+
+    }
+
+    .formulario {
+        width: 70vh;
+        margin-left: 40vh;
+        margin-top: 100px;
+        align-items: center;
+    }
+
+    .complete {
+        margin-left: 350px;
+        margin-top: 150px;
+    }
 }

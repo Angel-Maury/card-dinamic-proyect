@@ -77,7 +77,8 @@ body {
       margin: 22px;
       top: 47.5px;
       right: 20px;
-      font-size: 16px; }
+      font-size: 16px;
+      letter-spacing: 2px; }
 
 .formulario {
   padding-top: 60px;
@@ -102,7 +103,8 @@ body {
       border: solid 1px #ccc;
       height: 35px;
       border-radius: 5px;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      font-family: 'Space Grotesk'; }
       .formulario .grupo .nombre:hover,
       .formulario .grupo .numero:hover {
         border: solid 2px #21092f; }
@@ -206,7 +208,8 @@ body {
   border: solid 1px #ff000088;
   height: 35px;
   border-radius: 5px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-family: 'Space Grotesk'; }
   .error:hover {
     border: solid 2px rgba(255, 0, 0, 0.528); }
   .error:focus {
@@ -257,5 +260,67 @@ body {
 
 .active-complete {
   display: flex; }
+
+@media (min-width: 1200px) {
+  body {
+    background: #ffffff; }
+
+  .contenedor-principal {
+    display: flex;
+    flex-direction: row; }
+
+  .contenedor-tarjetas {
+    background: url(../images/bg-main-desktop.png);
+    height: 100vh;
+    width: 60vh;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    color: #fff;
+    justify-content: end;
+    align-items: center;
+    z-index: 1;
+    flex-direction: row; }
+    .contenedor-tarjetas .grupo-tarjeta-delantera {
+      margin: 20px;
+      width: 370px;
+      border-radius: 10px;
+      height: 210px;
+      margin-left: 180px;
+      position: absolute; }
+      .contenedor-tarjetas .grupo-tarjeta-delantera .tarjeta-delantera .numeros {
+        font-size: 25px; }
+      .contenedor-tarjetas .grupo-tarjeta-delantera .tarjeta-delantera .expedicion {
+        padding-left: 25px;
+        padding-right: 17px;
+        font-size: 14px; }
+      .contenedor-tarjetas .grupo-tarjeta-delantera .tarjeta-delantera .container-logo-card {
+        padding-top: 10px; }
+        .contenedor-tarjetas .grupo-tarjeta-delantera .tarjeta-delantera .container-logo-card .logo-card {
+          height: 40px;
+          padding-left: 18px; }
+    .contenedor-tarjetas .grupo-tarjeta-trasera {
+      margin-top: 140px;
+      position: absolute;
+      width: 370px;
+      height: 210px; }
+      .contenedor-tarjetas .grupo-tarjeta-trasera .tarjeta-trasera {
+        width: 370px;
+        height: 210px;
+        border-radius: 10px;
+        margin-left: 200px; }
+      .contenedor-tarjetas .grupo-tarjeta-trasera #ccv {
+        margin-top: 45.1px; }
+
+  .formulario {
+    width: 70vh;
+    margin-left: 40vh;
+    margin-top: 100px;
+    align-items: center; }
+
+  .complete {
+    margin-left: 350px;
+    margin-top: 150px; } }
 
 /*# sourceMappingURL=estilos.css.map */
