@@ -60,6 +60,15 @@ nombres.addEventListener('keyup', (e)=>{
         nombres.classList.add('nombre');
         textErrorName.classList.add('active-text');
     }
+});
+
+ccvForm.addEventListener('keyup', (e)=>{
+    let cvc = e.target.value;
+    ccvForm.value = cvc.replace(/\s/g, "").replace(/\D/g, "");
+    numeroCCV.textContent = cvc;
+    if(cvc == ""){
+        numeroCCV.textContent = "000"
+    }
 })
 
 // * Generando Opciones Para Los selects, de mes y año
@@ -112,7 +121,6 @@ btnEnviar.addEventListener('click',(e)=>{
         textErrorComplete.classList.remove('active-text');
     }
     else if (numeros.value.length < 19 || nombres.value.length < 3 || ccvForm.value.length < 3) {
-        console.log("numeros: ", numeros.value.length, "nombres: ", nombres.value.length, "ccvForm: ", ccvForm.value.length);
         textErrorComplete.classList.remove('active-text');
     }
     else{
